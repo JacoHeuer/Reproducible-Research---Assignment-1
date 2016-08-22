@@ -6,6 +6,7 @@ Download and load data:
 - library(scales)
 - library(Hmisc)
 
+
 if(!file.exists("repdata-data-activity.zip")) {
 
         temp <- tempfile()
@@ -15,17 +16,23 @@ if(!file.exists("repdata-data-activity.zip")) {
         unzip(temp)
         
         unlink(temp)
+        
 }
 
 activityData <- read.csv("activity.csv")
 
+
 # What is mean total number of steps taken per day?
+
 
 stepsByDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 
+
 1. histogram of total number of steps taken
 
+
 qplot(stepsByDay, xlab='Total steps per day', ylab='Frequency using binwith 500', binwidth=500)
+
 
 2. calculate mean and median total number of steps taken
 
