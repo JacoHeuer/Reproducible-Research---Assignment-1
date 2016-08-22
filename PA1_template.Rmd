@@ -2,14 +2,18 @@
 
 Download and load data:
 
-library(ggplot2)
-library(scales)
-library(Hmisc)
+- library(ggplot2)
+- library(scales)
+- library(Hmisc)
 
 if(!file.exists("repdata-data-activity.zip")) {
+
         temp <- tempfile()
+        
         download.file("http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip",temp)
+        
         unzip(temp)
+        
         unlink(temp)
 }
 
