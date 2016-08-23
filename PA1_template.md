@@ -15,7 +15,7 @@ stepsByDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 
 qplot(stepsByDay, xlab='Total steps per day', ylab='Frequency using binwith 500', binwidth=500)
 
-Reproducible-Research---Assignment-1/frequency using binwith 500.png
+- Reproducible-Research---Assignment-1/frequency using binwith 500.png
 
 2.Calculate mean and median total number of steps taken
 
@@ -39,7 +39,7 @@ xlab("5-minute interval") +
 
 ylab("average number of steps taken") 
 
-Reproducible-Research---Assignment-1/number of step 5-minute intrval.png
+- Reproducible-Research---Assignment-1/number of step 5-minute intrval.png
 
 2.Contains the maximum number of steps
 
@@ -65,7 +65,7 @@ stepsByDayImputed <- tapply(activityDataImputed$steps, activityDataImputed$date,
 
 qplot(stepsByDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency using binwith 500', binwidth=500)
 
-Reproducible-Research---Assignment-1/steps taken each day.png
+- Reproducible-Research---Assignment-1/steps taken each day.png
 
 4.Mean and mediun of total number of steps taken per day
 
@@ -93,4 +93,4 @@ xlab("5-minute interval") +
 
 ylab("avarage number of steps")
 
-Reproducible-Research---Assignment-1/avarage number of steps.png
+- Reproducible-Research---Assignment-1/avarage number of steps.png
