@@ -23,6 +23,9 @@ stepsByDayMean <- mean(stepsByDay)
 
 stepsByDayMedian <- median(stepsByDay)
 
+- Mean: 9354.2295
+- Median: 10395
+
 # What is the average daily activity pattern?
 
 average daily activity pattern
@@ -47,11 +50,15 @@ mostSteps <- which.max(averageStepsPerTimeBlock$meanSteps)
 
 timeMostSteps <- gsub("([0-9]{1,2})([0-9]{2})", "\1:\2", averageStepsPerTimeBlock[mostSteps,'interval'])
 
+- Steps at: 8:35
+
 # Imputing missing values:
 
 1.Total number of missing values in data set
 
 numMissingValues <- length(which(is.na(activityData$steps)))
+
+- Number of missing values: 2304
 
 2.Missing data filled in new data set
 
@@ -72,6 +79,9 @@ qplot(stepsByDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency u
 stepsByDayMeanImputed <- mean(stepsByDayImputed)
 
 stepsByDayMedianImputed <- median(stepsByDayImputed)
+
+- Mean (Imputed): 1.0766 × 104
+- Median (Imputed): 1.0766 × 104
 
 # Are there differences in activity patterns between weekdays and weekends?
 
